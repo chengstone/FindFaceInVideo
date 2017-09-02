@@ -126,6 +126,7 @@ facedetect.py的使用方法：
 
 1.先修改VGGFace/targets.txt文件，里面是图片路径的列表，每一个图片必须只有一个人。
 如果只有一个图片意味着只找这一个人，就是我说的待查找人。多个的话就是在视频和图片中找多个人。
+
 2.facedetect.py的命令行参数：
 
 python ./facedetect.py —-content 图片和视频的全路径
@@ -140,13 +141,16 @@ python ./facedetect.py —-content 图片和视频的全路径
 
 有个概念我解释一下，targets.txt文件中列出的是要找的人，可以是一个也可以是多个人。
 比如是我的照片，意味着要在视频或图片中找出我，查找依据就是根据targets.txt文件中我的照片查找。
+
 例如：/home/chengshd/ML/caffe-master/examples/VGGFace/chengshd/IMG_3588.JPG
 
 然后facedetect.py会先调用fa_test，将targets.txt文件中指定人物的照片做人脸识别，就是把照片中的人脸先找出来。
 facedetect.py会把调用fa_test所用的参数写进fa_test同级目录下的image.txt文件中。
+
 例如：/home/chengshd/ML/caffe-master/examples/VGGFace/chengshd/IMG_3588.JPG /home/chengshd/ML/caffe-master/examples/VGGFace/chengshd/IMG_3588 224
 
 结果就是把识别出的人脸图片放在以targets.txt文件中待查找人的图片文件名作为目录的目录下。
+
 例如：VGGFace/IMG_3588下：IMG_3588_crop_224_0_145_460_652_967.JPG文件就是fa_test识别出的人脸。
 
 接下来使用刚刚fa_test识别出的人脸，根据调用facedetect.py时传入的参数，在图片或者视频中找人。
