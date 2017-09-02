@@ -1,11 +1,11 @@
 # FindFaceInVideo
 This is a Deep Learning practice Demo which can find person in the video by human face.人脸识别的小demo，通过待识别的人脸图像在视频影像中找人。
 
-#
-# __Author__ chengstone
-# __WeChat__ 15041746064
-# __e-Mail__ 69558140@163.com
-# 
+
+__Author__ chengstone
+__WeChat__ 15041746064
+__e-Mail__ 69558140@163.com
+
 
 本Demo完成于2017年3月末4月初。
 
@@ -22,14 +22,21 @@ http://101.96.8.164/www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_caff
 
 #目录结构：
 facedetect.py:主程序，注意在使用时要将里面的路径改写成你本地的路径。
+
 face_recognition.py:提供两个人脸特征比较的功能。
 这个程序来源于https://github.com/HolmesShuan/DeepID-I-Reimplement，我做了修改，感兴趣的同学可以BeyondCompare差分一下。
+
 lfw_test_deal.py:来源于https://github.com/hqli/face_recognition。实际上好像并没有用到，可能是我当时做测试时用过，有点记不清了。
+
 out文件夹:用来存放视频找人的输出结果。
+
 tmp.jpg:是在图片中根据提供的待找人的人脸进行找人时的输出。
 以图片文件名命名的文件夹:比如IMG_3588，qingyansi等文件夹是对图片进行人脸识别测试时的输出，只关注是否找到人脸，而不进行是否是我们要找的人的判断。
+
 chengshd文件夹:用来存放我个人的测试用例，包含图片和视频。
+
 targets.txt:待查找人的图片路径列表。
+
 其他文件:基本上都是我测试时的输出。
 
 #程序的使用:
