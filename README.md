@@ -22,7 +22,7 @@ http://101.96.8.164/www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_caff
 
 视频中找人的output在文件夹out中，有4个avi文件。
 
-#目录结构：
+# 目录结构：
 
 facedetect.py:主程序，注意在使用时要将里面的路径改写成你本地的路径。
 
@@ -34,6 +34,7 @@ lfw_test_deal.py:来源于https://github.com/hqli/face_recognition。实际上�
 out文件夹:用来存放视频找人的输出结果。
 
 tmp.jpg:是在图片中根据提供的待找人的人脸进行找人时的输出。
+
 以图片文件名命名的文件夹:比如IMG_3588，qingyansi等文件夹是对图片进行人脸识别测试时的输出，只关注是否找到人脸，而不进行是否是我们要找的人的判断。
 
 chengshd文件夹:用来存放我个人的测试用例，包含图片和视频。
@@ -42,7 +43,7 @@ targets.txt:待查找人的图片路径列表。
 
 其他文件:基本上都是我测试时的输出。
 
-#程序的使用:
+# 程序的使用:
 
 本程序还要用到另外一个程序，请一起下载https://github.com/chengstone/SeetaFaceEngine
 
@@ -51,15 +52,15 @@ targets.txt:待查找人的图片路径列表。
 主要用来做待查找人图片中的人脸检测和定位。其中FaceAlignment/src/test/face_alignment_test.cpp我做了修改，使程序能够以命令行的方式支持多样化的人脸识别。
 VGGFace用来做人脸的比较，这里也使用了opencv的人脸检测，主要用于在目标图片中的多人脸的检测。
 
-#运行准备：
+# 运行准备：
 
-##一、环境依赖，请提前安装好：
+## 一、环境依赖，请提前安装好：
 
 opencv2
 caffe
 Python2.7
 
-##二、build顺序：
+## 二、build顺序：
 
 1.先编译SeetaFaceEngine下面的FaceDetection，编译方法可以参见里面的readme，大致命令是：
 mkdir build
@@ -96,7 +97,7 @@ make
 第三种：fa_test
 如果不传入参数，默认在程序当前路径下读取image.txt文件，文件内的格式参见上面的说明。这个是本Demo的使用方式。
 
-##三、开始视频/图片找人：
+## 三、开始视频/图片找人：
 
 主要代码在VGGFace中的facedetect.py中。
 这里使用了caffe的VGG模型用来做人脸的特征提取和特征比较。
@@ -111,7 +112,7 @@ python ./facedetect.py —-content 图片和视频的全路径
 举例1：python ./facedetect.py —-content /path/to/123.jpg
 举例2：python ./facedetect.py —-content /path/to/456.mov
 
-#识别过程：
+# 识别过程：
 
 有个概念我解释一下，targets.txt文件中列出的是要找的人，可以是一个也可以是多个人。
 比如是我的照片，意味着要在视频或图片中找出我，查找依据就是根据targets.txt文件中我的照片查找。
