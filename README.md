@@ -23,6 +23,7 @@ http://101.96.8.164/www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_caff
 视频中找人的output在文件夹out中，有4个avi文件。
 
 #目录结构：
+
 facedetect.py:主程序，注意在使用时要将里面的路径改写成你本地的路径。
 
 face_recognition.py:提供两个人脸特征比较的功能。
@@ -42,6 +43,7 @@ targets.txt:待查找人的图片路径列表。
 其他文件:基本上都是我测试时的输出。
 
 #程序的使用:
+
 本程序还要用到另外一个程序，请一起下载https://github.com/chengstone/SeetaFaceEngine
 
 本Demo分为两个工程：SeetaFaceEngine和VGGFace。
@@ -50,19 +52,22 @@ targets.txt:待查找人的图片路径列表。
 VGGFace用来做人脸的比较，这里也使用了opencv的人脸检测，主要用于在目标图片中的多人脸的检测。
 
 #运行准备：
+
 ##一、环境依赖，请提前安装好：
+
 opencv2
 caffe
 Python2.7
 
 ##二、build顺序：
-###1.先编译SeetaFaceEngine下面的FaceDetection，编译方法可以参见里面的readme，大致命令是：
+
+1.先编译SeetaFaceEngine下面的FaceDetection，编译方法可以参见里面的readme，大致命令是：
 mkdir build
 cd build
 cmake ..
 make
 
-###2.然后将编译好的文件（以我的电脑编译好后为例是facedet_test，libseeta_facedet_lib.dylib这两个文件），
+2.然后将编译好的文件（以我的电脑编译好后为例是facedet_test，libseeta_facedet_lib.dylib这两个文件），
 FaceDetection的.h文件face_detection.h，seeta_fa_v1.1.bin和seeta_fd_frontal_v1.0.bin几个文件拷贝到FaceAlignment的build目录下，
 然后编译，编译命令跟build FaceDetection一样。
 mkdir build
@@ -71,7 +76,7 @@ cmake ..
 make
 编译好后的文件名（以我的电脑编译好后为例）：fa_test
 
-###3.主要使用的就是FaceAlignment。
+3.主要使用的就是FaceAlignment。
 这个程序的命令行格式是：
 第一种: fa_test 源图片全路径 目标保存文件夹路径 [图片大小变幻的像素数]
 其中[图片大小变幻的像素数]可以省略，省略的话默认是不缩放图片的大小。
@@ -92,6 +97,7 @@ make
 如果不传入参数，默认在程序当前路径下读取image.txt文件，文件内的格式参见上面的说明。这个是本Demo的使用方式。
 
 ##三、开始视频/图片找人：
+
 主要代码在VGGFace中的facedetect.py中。
 这里使用了caffe的VGG模型用来做人脸的特征提取和特征比较。
 由于我自己训练的模型准确率太低（采用的DeepID模型，可能是我没有实现好，而且我的训练集也不太够），只好使用VGG公开的模型参数。
@@ -106,6 +112,7 @@ python ./facedetect.py —-content 图片和视频的全路径
 举例2：python ./facedetect.py —-content /path/to/456.mov
 
 #识别过程：
+
 有个概念我解释一下，targets.txt文件中列出的是要找的人，可以是一个也可以是多个人。
 比如是我的照片，意味着要在视频或图片中找出我，查找依据就是根据targets.txt文件中我的照片查找。
 例如：/home/chengshd/ML/caffe-master/examples/VGGFace/chengshd/IMG_3588.JPG
