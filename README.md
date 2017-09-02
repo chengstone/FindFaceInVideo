@@ -63,38 +63,57 @@ Python2.7
 ## 二、build顺序：
 
 1.先编译SeetaFaceEngine下面的FaceDetection，编译方法可以参见里面的readme，大致命令是：
+
 mkdir build
+
 cd build
+
 cmake ..
+
 make
 
 2.然后将编译好的文件（以我的电脑编译好后为例是facedet_test，libseeta_facedet_lib.dylib这两个文件），
 FaceDetection的.h文件face_detection.h，seeta_fa_v1.1.bin和seeta_fd_frontal_v1.0.bin几个文件拷贝到FaceAlignment的build目录下，
 然后编译，编译命令跟build FaceDetection一样。
+
 mkdir build
+
 cd build
+
 cmake ..
+
 make
+
 编译好后的文件名（以我的电脑编译好后为例）：fa_test
 
 3.主要使用的就是FaceAlignment。
 这个程序的命令行格式是：
+
 第一种: fa_test 源图片全路径 目标保存文件夹路径 [图片大小变幻的像素数]
+
 其中[图片大小变幻的像素数]可以省略，省略的话默认是不缩放图片的大小。
+
 举例：fa_test /path/to/123.jpg /path/to/folder 32
+
 将图片123.jpg识别出的人脸图片输出到/path/to/folder文件夹中，缩放后的尺寸是32 * 32的大小。
 
 第二种：fa_test 保存源图片全路径列表的文件路径
+
 其中[存源图片全路径列表的文件路径]是一个文本文件，里面是若干行第一种命令格式的字符串，用于批量识别图片。
+
 举例：fa_test /path/to/image.txt
+
 其中image.txt里面的内容类似如下内容，可以是一行也可以是多行：
+
 /Users/chengstone/Downloads/ML/att_faces/s40/9.jpg /Users/chengstone/Downloads/ML/att_faces_new/s40 64
 /Users/chengstone/Downloads/ML/att_faces/s40/8.jpg /Users/chengstone/Downloads/ML/att_faces_new/s40 64
 /Users/chengstone/Downloads/ML/att_faces/s40/7.jpg /Users/chengstone/Downloads/ML/att_faces_new/s40 64
 /Users/chengstone/Downloads/ML/att_faces/s40/6.jpg /Users/chengstone/Downloads/ML/att_faces_new/s40 64
+
 这个程序有时并不能准确识别人脸。。。
 
 第三种：fa_test
+
 如果不传入参数，默认在程序当前路径下读取image.txt文件，文件内的格式参见上面的说明。这个是本Demo的使用方式。
 
 ## 三、开始视频/图片找人：
@@ -104,12 +123,17 @@ make
 由于我自己训练的模型准确率太低（采用的DeepID模型，可能是我没有实现好，而且我的训练集也不太够），只好使用VGG公开的模型参数。
 
 facedetect.py的使用方法：
+
 1.先修改VGGFace/targets.txt文件，里面是图片路径的列表，每一个图片必须只有一个人。
 如果只有一个图片意味着只找这一个人，就是我说的待查找人。多个的话就是在视频和图片中找多个人。
 2.facedetect.py的命令行参数：
+
 python ./facedetect.py —-content 图片和视频的全路径
+
 其中[图片和视频的全路径]是我们要查找的目标。
+
 举例1：python ./facedetect.py —-content /path/to/123.jpg
+
 举例2：python ./facedetect.py —-content /path/to/456.mov
 
 # 识别过程：
@@ -121,6 +145,7 @@ python ./facedetect.py —-content 图片和视频的全路径
 然后facedetect.py会先调用fa_test，将targets.txt文件中指定人物的照片做人脸识别，就是把照片中的人脸先找出来。
 facedetect.py会把调用fa_test所用的参数写进fa_test同级目录下的image.txt文件中。
 例如：/home/chengshd/ML/caffe-master/examples/VGGFace/chengshd/IMG_3588.JPG /home/chengshd/ML/caffe-master/examples/VGGFace/chengshd/IMG_3588 224
+
 结果就是把识别出的人脸图片放在以targets.txt文件中待查找人的图片文件名作为目录的目录下。
 例如：VGGFace/IMG_3588下：IMG_3588_crop_224_0_145_460_652_967.JPG文件就是fa_test识别出的人脸。
 
