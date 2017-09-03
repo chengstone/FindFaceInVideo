@@ -45,6 +45,10 @@ chengshd文件夹:用来存放我个人的测试用例，包含图片和视频�
 
 targets.txt:待查找人的图片路径列表。
 
+positive_pairs_path.txt:是face_recognition.py的测试数据，每行提供用于比较的两个图片路径。例如：2-1.png 2-2.png
+
+测试函数face_recog_test读取每一对图片，计算各组图片最佳的参数：Accuracys，Thresholds，Precisions，Recalls，F1Score等。
+
 其他文件:基本上都是我测试时的输出。
 
 # 程序的使用:
