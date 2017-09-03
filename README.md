@@ -20,7 +20,7 @@ http://101.96.8.164/www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_caff
 ![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3030_modify_2.jpg)
 ![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3664_modify_2.jpg)
 ![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3747-2.jpg)
-![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3749-2.jpg)
+
 视频中找人的output在文件夹out中，有4个avi文件。
 
 # 目录结构：
