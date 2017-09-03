@@ -19,10 +19,10 @@ http://101.96.8.164/www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_caff
 ![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_0468_modify_2.jpg)
 ![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3030_modify_2.jpg)
 ![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3664_modify_2.jpg)
-![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3747.jpg)
-![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3748.jpg)
-![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3751.jpg)
-![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3746.jpg)
+![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3747.JPG)
+![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3748.JPG)
+![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3751.JPG)
+![image](https://github.com/chengstone/FindFaceInVideo/raw/master/VGGFace/IMG_3746.JPG)
 
 视频中找人的output在文件夹out中，有4个avi文件。
 
