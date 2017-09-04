@@ -4,8 +4,6 @@ This is a Deep Learning practice Demo which can find person in the video by huma
 
 __Author__ chengstone
 
-__WeChat__ 15041746064
-
 __e-Mail__ 69558140@163.com
 
 
