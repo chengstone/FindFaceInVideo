@@ -11,6 +11,8 @@ __e-Mail__ 69558140@163.com
 
 本Demo完成于2017年3月末4月初。
 
+代码详解请参见博客：http://blog.csdn.net/chengcheng1394/article/details/77817194
+
 程序使用了VGG的模型参数，这里没有上传，需要你另外下载，共两个文件（VGG_FACE_deploy.prototxt，VGG_FACE.caffemodel）放到VGGFace目录下。
 我当时的下载地址如下：
 http://101.96.8.164/www.robots.ox.ac.uk/~vgg/software/vgg_face/src/vgg_face_caffe.tar.gz
