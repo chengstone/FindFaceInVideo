@@ -1,6 +1,13 @@
 # FindFaceInVideo
 This is a Deep Learning practice Demo which can find person in the video by human face.人脸识别的小demo，通过待识别的人脸图像在视频影像中找人。
 
+================================================================================
+
+代码已重新实现，请看下面链接：
+
+https://github.com/chengstone/Face_Recognizer
+
+================================================================================
 
 __Author__ chengstone
 
