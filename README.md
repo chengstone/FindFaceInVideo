@@ -1,3 +1,4 @@
+<a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg"></a>
 # FindFaceInVideo
 This is a Deep Learning practice Demo which can find person in the video by human face.人脸识别的小demo，通过待识别的人脸图像在视频影像中找人。
 
@@ -187,3 +188,6 @@ facedetect.py会把调用fa_test所用的参数写进fa_test同级目录下的im
 但是一旦两个人不相似，相似度很低，大都小于1%，所以0.4这个值还是堪用的。
 
 更多内容请参考代码，Enjoy！
+
+# 许可
+Licensed under the BSD 2-Clause License with the [`996ICU License`](https://github.com/996icu/996.ICU/blob/master/LICENSE).
